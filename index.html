@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Logo </title>
+  <style>
+    :root {
+      --yt-red: #ff0000;
+      --bg: #0f1115;
+      --card: #151922;
+    }* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(1200px 800px at 50% -20%, #1d2230 0%, var(--bg) 70%);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #e6e8ee;
+}
+
+.card {
+  background: var(--card);
+  padding: 28px 32px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.03);
+  display: grid;
+  gap: 16px;
+  text-align: center;
+}
+
+.title { font-size: 25px; opacity: 0.9; letter-spacing: 0.4px; }
+
+/*
+  The logo is an inline SVG so it's pure HTML and very scalable.
+  Change width to adjust size.
+*/
+.logo {
+  width: 240px;               /* 👈 change this to resize */
+  filter: drop-shadow(0 10px 24px rgba(255, 0, 0, 0.35));
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.logo:hover {
+  transform: translateY(-3px) scale(1.02);
+  filter: drop-shadow(0 16px 30px rgba(255, 0, 0, 0.45));
+}
+
+.credit { font-size: 12px; opacity: 0.6; }
+.credit code { background: #0f1320; padding: 2px 6px; border-radius: 6px; }
+
+  </style>
+</head>
+<body>  <div class="card">
+    <div class="title">YouTube Logo </div><!-- Accessible, scalable YouTube-style play button logo -->
+<svg
+  class="logo"
+  viewBox="0 0 100 70"
+  role="img"
+  aria-label="YouTube play button logo"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Red rounded rectangle (play button shape) -->
+  <rect x="0" y="0" width="100" height="70" rx="14" fill="var(--yt-red)" />
+  <!-- White play triangle -->
+  <polygon points="42,22 42,48 66,35" fill="#fff" />
+</svg>
+
+<div class="credit">
+   <h3>It is a social site.</h3>
+</div>
+
+  </div></body>
+</html>
